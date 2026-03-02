@@ -3,24 +3,33 @@
 <head>
     <title>My College Information Hub</title>
     <style>
+        /* This part makes the website look beautiful */
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f2f5; color: #333; }
+        
         header { background: #003366; color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid #e67e22; }
+        
+        /* THE MOVING NEWS BAR */
+        .news-ticker { background: #ffcc00; color: #222; padding: 10px; font-weight: bold; overflow: hidden; }
+        
         nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; }
-        nav a:hover { color: #e67e22; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: 0.3s; }
+        nav a:hover { color: #e67e22; border-bottom: 2px solid #e67e22; }
+        
         .main-container { max-width: 900px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .notice-board { background: #fff3cd; border: 2px solid #ffeeba; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
-        .notice-board h2 { color: #856404; margin-top: 0; }
-        section { padding: 20px 0; border-bottom: 1px solid #eee; }
-        h2 { color: #003366; }
         
-        /* New styles for the Form */
-        .form-box { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; text-align: left; }
-        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .notice-board { background: #fff3cd; border-left: 10px solid #e67e22; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
         
-        footer { text-align: center; padding: 30px; color: #777; font-size: 14px; }
-        .btn { background: #e67e22; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; }
-        .btn:hover { background: #d35400; }
+        section { padding: 30px 0; border-bottom: 1px solid #eee; }
+        h2 { color: #003366; border-left: 5px solid #003366; padding-left: 10px; }
+        
+        /* MAKING BUTTONS COOL */
+        .btn { background: #e67e22; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #d35400; transform: scale(1.05); }
+
+        .form-box { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; }
+        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        
+        footer { text-align: center; padding: 30px; color: #777; background: #eee; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -29,6 +38,10 @@
     <h1>Welcome to Our College Information Hub</h1>
     <p>Official Daily Updates for Students & Faculty</p>
 </header>
+
+<div class="news-ticker">
+    <marquee>📢 NEW: Final Exam Hall Tickets are now available in the office! | Sports Day registrations close this Friday! | Welcome to the 2026 Batch!</marquee>
+</div>
 
 <nav>
     <a href="#about">About</a>
@@ -40,46 +53,50 @@
 
 <div class="main-container">
 
+    <div style="text-align: center; margin-bottom: 30px;">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="College Building" style="width:100%; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        <p style="font-style: italic; color: #666;">Our Beautiful Campus</p>
+    </div>
+
     <div class="notice-board">
-        <h2>📢 Today's Notice</h2>
-        <p><strong>Final Exams:</strong> The schedule for the Class 10 board exams has been posted on the main hall board. Please check it daily!</p>
+        <h2 style="border:none; margin-top:0; color:#856404;">📢 Principal's Message</h2>
+        <p><strong>"Education is the most powerful weapon which you can use to change the world."</strong> - Check this board daily for holiday and exam updates.</p>
     </div>
 
     <section id="about">
         <h2>🏫 About Our College</h2>
-        <p>Our college provides a world-class education focused on Science, Arts, and Technology. We help students build their future through learning and sports.</p>
+        <p>Our college provides a world-class education focused on Science, Arts, and Technology. We have modern labs, a huge library, and a big playground.</p>
     </section>
 
     <section id="departments">
         <h2>📚 Departments</h2>
-        <ul>
-            <li><strong>Science:</strong> Physics, Chemistry, Biology, and Maths.</li>
-            <li><strong>Arts:</strong> History, Civics, and Languages.</li>
-            <li><strong>Commerce:</strong> Economics and Accountancy.</li>
-        </ul>
-    </section>
-
-    <section id="faculty">
-        <h2>👨‍🏫 Our Faculty</h2>
-        <p>We have over 40 highly qualified teachers dedicated to student success. Office hours: 9 AM to 3 PM.</p>
+        <table style="width:100%; border-collapse: collapse;">
+            <tr style="background:#003366; color:white;">
+                <th style="padding:10px; border:1px solid #ddd;">Course</th>
+                <th style="padding:10px; border:1px solid #ddd;">Head Teacher</th>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #ddd;">Science (Physics/Maths)</td>
+                <td style="padding:10px; border:1px solid #ddd;">Mr. Sharma</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #ddd;">Arts (History/Civics)</td>
+                <td style="padding:10px; border:1px solid #ddd;">Ms. Gupta</td>
+            </tr>
+        </table>
     </section>
 
     <section id="admission">
         <h2>📝 Admission 2026</h2>
-        <p>Ready to join? Fill out the quick application below!</p>
-        
+        <p>Join the best college in Sydney! Fill in your name to start:</p>
         <div class="form-box">
-            <label>Student Full Name:</label>
-            <input type="text" id="studentName" placeholder="Enter your name">
-            
-            <label>Interested Department:</label>
-            <select style="width: 100%; padding: 10px; margin: 10px 0;">
-                <option>Science</option>
-                <option>Arts</option>
-                <option>Commerce</option>
+            <input type="text" id="name" placeholder="Your Full Name">
+            <select>
+                <option>Choose your Class</option>
+                <option>11th Grade</option>
+                <option>12th Grade</option>
             </select>
-
-            <button class="btn" onclick="submitForm()">Submit Application</button>
+            <button class="btn" onclick="sayHello()">Apply Now</button>
         </div>
     </section>
 
@@ -87,21 +104,21 @@
         <h2>✉️ Contact Us</h2>
         <p>Have a question? Send us a message!</p>
         <div class="form-box">
-            <input type="email" placeholder="Your Email Address">
-            <textarea placeholder="Type your message here..." style="height: 100px;"></textarea>
-            <button class="btn" style="background: #333;" onclick="submitForm()">Send Message</button>
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="How can we help you?"></textarea>
+            <button class="btn" style="background: #333;" onclick="sayHello()">Send Message</button>
         </div>
     </section>
 
 </div>
 
 <footer>
-    &copy; 2026 My College Hub | Sydney, Australia | Contact: college@email.com
+    &copy; 2026 My College Hub | Sydney, Australia | Updated: March 2, 2026
 </footer>
 
 <script>
-    function submitForm() {
-        alert("Success! Your information has been sent to the College Office. We will contact you soon!");
+    function sayHello() {
+        alert("Success! Your message has been sent to the College Office. Have a great day!");
     }
 </script>
 
