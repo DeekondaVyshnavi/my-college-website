@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My College Information Hub</title>
+    <title>BITS Narsampet - Student Information Hub</title>
     <style>
-        /* This part makes the website look beautiful */
+        /* This part makes the website look beautiful and professional */
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f2f5; color: #333; }
         
         header { background: #003366; color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid #e67e22; }
         
-        /* THE MOVING NEWS BAR */
-        .news-ticker { background: #ffcc00; color: #222; padding: 10px; font-weight: bold; overflow: hidden; }
+        /* THE MOVING NEWS BAR (MARQUEE) */
+        .news-ticker { background: #ffcc00; color: #222; padding: 10px; font-weight: bold; overflow: hidden; border-bottom: 2px solid #333; }
         
         nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
         nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: 0.3s; }
         nav a:hover { color: #e67e22; border-bottom: 2px solid #e67e22; }
         
-        .main-container { max-width: 900px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .main-container { max-width: 950px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
         .notice-board { background: #fff3cd; border-left: 10px solid #e67e22; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
         
         section { padding: 30px 0; border-bottom: 1px solid #eee; }
         h2 { color: #003366; border-left: 5px solid #003366; padding-left: 10px; }
         
-        /* MAKING BUTTONS COOL */
+        /* COOL BUTTONS */
         .btn { background: #e67e22; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.3s; }
         .btn:hover { background: #d35400; transform: scale(1.05); }
 
@@ -30,17 +30,20 @@
         input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
         
         footer { text-align: center; padding: 30px; color: #777; background: #eee; margin-top: 20px; }
+        
+        /* This makes the image look nice */
+        .college-img { width: 100%; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.2); margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to Our College Information Hub</h1>
+    <h1>Welcome to BITS Narsampet Info Hub</h1>
     <p>Official Daily Updates for Students & Faculty</p>
 </header>
 
 <div class="news-ticker">
-    <marquee>📢 NEW: Final Exam Hall Tickets are now available in the office! | Sports Day registrations close this Friday! | Welcome to the 2026 Batch!</marquee>
+    <marquee scrollamount="7">📢 NEW: Final Exam Hall Tickets are now available! | BITS Narsampet Sports Day starts next Monday! | Admission Open for 2026 Batch! | Check the Notice Board for Holiday details.</marquee>
 </div>
 
 <nav>
@@ -54,71 +57,85 @@
 <div class="main-container">
 
     <div style="text-align: center; margin-bottom: 30px;">
-        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="College Building" style="width:100%; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-        <p style="font-style: italic; color: #666;">Our Beautiful Campus</p>
+        <img src="https://bitswgl.ac.in/assets/img/about/bits_building.png" alt="BITS Narsampet Building" class="college-img">
+        <p style="font-style: italic; color: #666;">Main Campus Building - BITS Narsampet</p>
     </div>
 
     <div class="notice-board">
-        <h2 style="border:none; margin-top:0; color:#856404;">📢 Principal's Message</h2>
-        <p><strong>"Education is the most powerful weapon which you can use to change the world."</strong> - Check this board daily for holiday and exam updates.</p>
+        <h2 style="border:none; margin-top:0; color:#856404;">📢 Important Notice</h2>
+        <p><strong>Exams:</strong> The schedule for the Class 10/Intermediate board exams has been posted. Please visit the office to collect your hall tickets before Friday.</p>
     </div>
 
     <section id="about">
         <h2>🏫 About Our College</h2>
-        <p>Our college provides a world-class education focused on Science, Arts, and Technology. We have modern labs, a huge library, and a big playground.</p>
+        <p>BITS Narsampet is a premier educational institution known for excellence in Engineering, Science, and Technology. We provide a safe and helpful environment for all students to learn and succeed.</p>
     </section>
 
     <section id="departments">
         <h2>📚 Departments</h2>
-        <table style="width:100%; border-collapse: collapse;">
+        <p>We offer the following main branches of study:</p>
+        <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
             <tr style="background:#003366; color:white;">
-                <th style="padding:10px; border:1px solid #ddd;">Course</th>
-                <th style="padding:10px; border:1px solid #ddd;">Head Teacher</th>
+                <th style="padding:12px; border:1px solid #ddd; text-align: left;">Department Name</th>
+                <th style="padding:12px; border:1px solid #ddd; text-align: left;">Head of Dept (HOD)</th>
             </tr>
             <tr>
-                <td style="padding:10px; border:1px solid #ddd;">Science (Physics/Maths)</td>
-                <td style="padding:10px; border:1px solid #ddd;">Mr. Sharma</td>
+                <td style="padding:12px; border:1px solid #ddd;">Computer Science (CSE)</td>
+                <td style="padding:12px; border:1px solid #ddd;">Prof. Rajesh Kumar</td>
             </tr>
             <tr>
-                <td style="padding:10px; border:1px solid #ddd;">Arts (History/Civics)</td>
-                <td style="padding:10px; border:1px solid #ddd;">Ms. Gupta</td>
+                <td style="padding:12px; border:1px solid #ddd;">Electronics (ECE)</td>
+                <td style="padding:12px; border:1px solid #ddd;">Dr. Sneha Rao</td>
+            </tr>
+            <tr>
+                <td style="padding:12px; border:1px solid #ddd;">Civil Engineering</td>
+                <td style="padding:12px; border:1px solid #ddd;">Mr. V. Prasad</td>
             </tr>
         </table>
     </section>
 
+    <section id="faculty">
+        <h2>👨‍🏫 Faculty Details</h2>
+        <p>Our teachers are experts in their subjects. They are available for student help daily from 9:00 AM to 4:00 PM in the Staff Room.</p>
+    </section>
+
     <section id="admission">
-        <h2>📝 Admission 2026</h2>
-        <p>Join the best college in Sydney! Fill in your name to start:</p>
+        <h2>📝 Online Admission 2026</h2>
+        <p>Want to join BITS Narsampet? Fill in your name and class below to start the application process.</p>
         <div class="form-box">
-            <input type="text" id="name" placeholder="Your Full Name">
+            <label>Student Name:</label>
+            <input type="text" placeholder="Enter your full name">
+            
+            <label>Select Your Class:</label>
             <select>
-                <option>Choose your Class</option>
-                <option>11th Grade</option>
-                <option>12th Grade</option>
+                <option>Choose Class</option>
+                <option>10th Standard</option>
+                <option>Intermediate (11th/12th)</option>
+                <option>Engineering (B.Tech)</option>
             </select>
-            <button class="btn" onclick="sayHello()">Apply Now</button>
+            <button class="btn" onclick="showSuccess()">Apply Now</button>
         </div>
     </section>
 
     <section id="contact" style="border-bottom: none;">
         <h2>✉️ Contact Us</h2>
-        <p>Have a question? Send us a message!</p>
+        <p>Have a question for the principal or office? Send us a quick message!</p>
         <div class="form-box">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="How can we help you?"></textarea>
-            <button class="btn" style="background: #333;" onclick="sayHello()">Send Message</button>
+            <input type="email" placeholder="Your Email Address">
+            <textarea placeholder="Type your question or message here..." style="height: 100px;"></textarea>
+            <button class="btn" style="background: #333;" onclick="showSuccess()">Send Message</button>
         </div>
     </section>
 
 </div>
 
 <footer>
-    &copy; 2026 My College Hub | Sydney, Australia | Updated: March 2, 2026
+    &copy; 2026 BITS Narsampet Hub | Sydney, Australia | Updated: March 2, 2026
 </footer>
 
 <script>
-    function sayHello() {
-        alert("Success! Your message has been sent to the College Office. Have a great day!");
+    function showSuccess() {
+        alert("Success! Your information has been sent to the College Office. We will contact you soon!");
     }
 </script>
 
