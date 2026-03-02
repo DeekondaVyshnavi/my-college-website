@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My College Information Website</title>
+    <title>My College Information Hub</title>
     <style>
-        /* This makes it look like a real website */
-        body { font-family: sans-serif; text-align: center; background-color: #eef2f3; margin: 0; padding: 0; }
-        header { background-color: #0056b3; color: white; padding: 30px; }
-        nav { background: #333; padding: 10px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .content { background: white; width: 80%; margin: 20px auto; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px grey; }
-        .notice-box { border: 2px dashed red; padding: 10px; background-color: #fff4f4; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f2f5; color: #333; }
+        header { background: #003366; color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid #e67e22; }
+        nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; }
+        nav a:hover { color: #e67e22; }
+        .main-container { max-width: 900px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .notice-board { background: #fff3cd; border: 2px solid #ffeeba; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .notice-board h2 { color: #856404; margin-top: 0; }
+        section { padding: 20px 0; border-bottom: 1px solid #eee; }
+        h2 { color: #003366; }
+        footer { text-align: center; padding: 30px; color: #777; font-size: 14px; }
+        .btn { background: #e67e22; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to Our College Hub</h1>
-        <p>Your Daily Source for Info</p>
-    </header>
+<header>
+    <h1>Welcome to Our College Information Hub</h1>
+    <p>Official Daily Updates for Students & Faculty</p>
+</header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#departments">Departments</a>
-        <a href="#faculty">Faculty</a>
-        <a href="#admission">Admission</a>
-    </nav>
+<nav>
+    <a href="#about">About</a>
+    <a href="#departments">Departments</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#admission">Admission</a>
+</nav>
 
-    <div class="content">
-        <div class="notice-box">
-            <h3 style="color: red;">📢 Today's Important Notice:</h3>
-            <p><strong>Final Exams start next Monday! Please collect your hall tickets.</strong></p>
-        </div>
+<div class="main-container">
 
-        <section id="about">
-            <h2>🏫 About Our College</h2>
-            <p>Our college is the best place to learn Science, Arts, and Sports!</p>
-        </section>
-
-        <section id="departments">
-            <h2>📚 Departments</h2>
-            <p>Computer Science | Physics | Biology | Commerce</p>
-        </section>
-
-        <section id="faculty">
-            <h2>👨‍🏫 Our Faculty</h2>
-            <p>Meet our expert teachers in the main staff room daily from 9 AM to 4 PM.</p>
-        </section>
-
-        <section id="admission">
-            <h2>📝 Admission</h2>
-            <p>Open Admissions are now live! Click the button below to apply.</p>
-            <button style="padding: 10px 20px; background: green; color: white; border: none; cursor: pointer;">Apply Now</button>
-        </section>
+    <div class="notice-board">
+        <h2>📢 Today's Notice</h2>
+        <p><strong>Final Exams:</strong> The schedule for the Class 10 board exams has been posted on the main hall board. Please check it daily!</p>
     </div>
 
-    <footer style="margin-top: 50px; color: grey;">
-        <p>Contact us: college@email.com | Sydney, Australia</p>
-    </footer>
+    <section id="about">
+        <h2>🏫 About Our College</h2>
+        <p>Our college provides a world-class education focused on Science, Arts, and Technology. Located in the heart of the city, we help students build their future.</p>
+    </section>
+
+    <section id="departments">
+        <h2>📚 Departments</h2>
+        <ul>
+            <li><strong>Science:</strong> Physics, Chemistry, Biology, and Maths.</li>
+            <li><strong>Arts:</strong> History, Civics, and Languages.</li>
+            <li><strong>Commerce:</strong> Economics and Accountancy.</li>
+        </ul>
+    </section>
+
+    <section id="faculty">
+        <h2>👨‍🏫 Our Faculty</h2>
+        <p>We have over 40 highly qualified teachers dedicated to student success. Meet them during office hours from 9 AM to 3 PM.</p>
+    </section>
+
+    <section id="admission">
+        <h2>📝 Admission</h2>
+        <p>Join our community! Admissions for the 2026 session are now open. Download the form below or visit the office.</p>
+        <button class="btn">Apply Now</button>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 My College Hub | Sydney, Australia | Contact: college@email.com
+</footer>
 
 </body>
 </html>
