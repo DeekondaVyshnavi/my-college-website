@@ -5,7 +5,7 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f2f5; color: #333; }
         header { background: #003366; color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid #e67e22; }
-        nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; }
+        nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
         nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; }
         nav a:hover { color: #e67e22; }
         .main-container { max-width: 900px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
@@ -13,8 +13,14 @@
         .notice-board h2 { color: #856404; margin-top: 0; }
         section { padding: 20px 0; border-bottom: 1px solid #eee; }
         h2 { color: #003366; }
+        
+        /* New styles for the Form */
+        .form-box { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; text-align: left; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        
         footer { text-align: center; padding: 30px; color: #777; font-size: 14px; }
-        .btn { background: #e67e22; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .btn { background: #e67e22; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        .btn:hover { background: #d35400; }
     </style>
 </head>
 <body>
@@ -29,6 +35,7 @@
     <a href="#departments">Departments</a>
     <a href="#faculty">Faculty</a>
     <a href="#admission">Admission</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <div class="main-container">
@@ -40,7 +47,7 @@
 
     <section id="about">
         <h2>🏫 About Our College</h2>
-        <p>Our college provides a world-class education focused on Science, Arts, and Technology. Located in the heart of the city, we help students build their future.</p>
+        <p>Our college provides a world-class education focused on Science, Arts, and Technology. We help students build their future through learning and sports.</p>
     </section>
 
     <section id="departments">
@@ -54,15 +61,36 @@
 
     <section id="faculty">
         <h2>👨‍🏫 Our Faculty</h2>
-        <p>We have over 40 highly qualified teachers dedicated to student success. Meet them during office hours from 9 AM to 3 PM.</p>
+        <p>We have over 40 highly qualified teachers dedicated to student success. Office hours: 9 AM to 3 PM.</p>
     </section>
 
     <section id="admission">
-        <h2>📝 Admission</h2>
-        <p>Join our community! Admissions for the 2026 session are now open. Download the form below or visit the office.</p>
-        <a href="mailto:college@email.com?subject=Admission Inquiry">
-    <button class="btn">Apply Now (Send Email)</button>
-</a>
+        <h2>📝 Admission 2026</h2>
+        <p>Ready to join? Fill out the quick application below!</p>
+        
+        <div class="form-box">
+            <label>Student Full Name:</label>
+            <input type="text" id="studentName" placeholder="Enter your name">
+            
+            <label>Interested Department:</label>
+            <select style="width: 100%; padding: 10px; margin: 10px 0;">
+                <option>Science</option>
+                <option>Arts</option>
+                <option>Commerce</option>
+            </select>
+
+            <button class="btn" onclick="submitForm()">Submit Application</button>
+        </div>
+    </section>
+
+    <section id="contact" style="border-bottom: none;">
+        <h2>✉️ Contact Us</h2>
+        <p>Have a question? Send us a message!</p>
+        <div class="form-box">
+            <input type="email" placeholder="Your Email Address">
+            <textarea placeholder="Type your message here..." style="height: 100px;"></textarea>
+            <button class="btn" style="background: #333;" onclick="submitForm()">Send Message</button>
+        </div>
     </section>
 
 </div>
@@ -70,6 +98,12 @@
 <footer>
     &copy; 2026 My College Hub | Sydney, Australia | Contact: college@email.com
 </footer>
+
+<script>
+    function submitForm() {
+        alert("Success! Your information has been sent to the College Office. We will contact you soon!");
+    }
+</script>
 
 </body>
 </html>
