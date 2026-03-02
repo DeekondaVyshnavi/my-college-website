@@ -1,143 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BITS Narsampet - Student Information Hub</title>
+    <title>BITS Narsampet - Student Hub</title>
     <style>
-        /* This part makes the website look beautiful and professional */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f2f5; color: #333; }
+        /* Modern and clean look */
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f7f6; color: #333; }
         
         header { background: #003366; color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid #e67e22; }
         
-        /* THE MOVING NEWS BAR (MARQUEE) */
-        .news-ticker { background: #ffcc00; color: #222; padding: 10px; font-weight: bold; overflow: hidden; border-bottom: 2px solid #333; }
+        /* Moving News Bar */
+        .news-ticker { background: #ffcc00; color: #222; padding: 10px; font-weight: bold; }
         
         nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: 0.3s; }
-        nav a:hover { color: #e67e22; border-bottom: 2px solid #e67e22; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: #e67e22; }
         
-        .main-container { max-width: 950px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .main-container { max-width: 900px; margin: 20px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         
-        .notice-board { background: #fff3cd; border-left: 10px solid #e67e22; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .notice-board { background: #fff3cd; border-left: 8px solid #e67e22; padding: 15px; border-radius: 5px; margin-bottom: 25px; }
         
-        section { padding: 30px 0; border-bottom: 1px solid #eee; }
-        h2 { color: #003366; border-left: 5px solid #003366; padding-left: 10px; }
+        section { padding: 25px 0; border-bottom: 1px solid #eee; }
+        h2 { color: #003366; }
         
-        /* COOL BUTTONS */
-        .btn { background: #e67e22; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: #d35400; transform: scale(1.05); }
+        /* Button Styles */
+        .btn { background: #e67e22; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; text-decoration: none; display: inline-block; }
+        .btn:hover { background: #d35400; }
+        
+        /* WhatsApp Green Color */
+        .whatsapp-btn { background: #25D366; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
+        .whatsapp-btn:hover { background: #128C7E; }
 
         .form-box { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; }
-        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
         
-        footer { text-align: center; padding: 30px; color: #777; background: #eee; margin-top: 20px; }
-        
-        /* This makes the image look nice */
-        .college-img { width: 100%; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.2); margin-bottom: 10px; }
+        footer { text-align: center; padding: 30px; color: #777; background: #eee; }
+        .college-img { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Welcome to BITS Narsampet Info Hub</h1>
-    <p>Official Daily Updates for Students & Faculty</p>
+    <p>Daily Updates for Students & Teachers</p>
 </header>
 
 <div class="news-ticker">
-    <marquee scrollamount="7">📢 NEW: Final Exam Hall Tickets are now available! | BITS Narsampet Sports Day starts next Monday! | Admission Open for 2026 Batch! | Check the Notice Board for Holiday details.</marquee>
+    <marquee>📢 Hall Tickets are out! | Sports Day next week! | New Admissions for 2026 started! | Stay safe and keep learning.</marquee>
 </div>
 
 <nav>
     <a href="#about">About</a>
     <a href="#departments">Departments</a>
-    <a href="#faculty">Faculty</a>
     <a href="#admission">Admission</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <div class="main-container">
 
-    <div style="text-align: center; margin-bottom: 30px;">
-        <img src="https://bitswgl.ac.in/assets/img/about/bits_building.png" alt="BITS Narsampet Building" class="college-img">
-        <p style="font-style: italic; color: #666;">Main Campus Building - BITS Narsampet</p>
+    <div style="text-align: center; margin-bottom: 25px;">
+        <img src="https://bitswgl.ac.in/assets/img/about/bits_building.png" alt="BITS Building" class="college-img">
+        <p><i>The beautiful BITS Narsampet Campus</i></p>
     </div>
 
     <div class="notice-board">
-        <h2 style="border:none; margin-top:0; color:#856404;">📢 Important Notice</h2>
-        <p><strong>Exams:</strong> The schedule for the Class 10/Intermediate board exams has been posted. Please visit the office to collect your hall tickets before Friday.</p>
+        <h2>📢 Principal's Message</h2>
+        <p><strong>Exams:</strong> Class 10 Board Exam schedules are now available. Visit the office for details.</p>
     </div>
 
     <section id="about">
-        <h2>🏫 About Our College</h2>
-        <p>BITS Narsampet is a premier educational institution known for excellence in Engineering, Science, and Technology. We provide a safe and helpful environment for all students to learn and succeed.</p>
+        <h2>🏫 About Us</h2>
+        <p>BITS Narsampet is located in Telangana, India. We are a top college for Engineering and Science. Our goal is to make every student a leader.</p>
     </section>
 
     <section id="departments">
         <h2>📚 Departments</h2>
-        <p>We offer the following main branches of study:</p>
-        <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
-            <tr style="background:#003366; color:white;">
-                <th style="padding:12px; border:1px solid #ddd; text-align: left;">Department Name</th>
-                <th style="padding:12px; border:1px solid #ddd; text-align: left;">Head of Dept (HOD)</th>
-            </tr>
-            <tr>
-                <td style="padding:12px; border:1px solid #ddd;">Computer Science (CSE)</td>
-                <td style="padding:12px; border:1px solid #ddd;">Prof. Rajesh Kumar</td>
-            </tr>
-            <tr>
-                <td style="padding:12px; border:1px solid #ddd;">Electronics (ECE)</td>
-                <td style="padding:12px; border:1px solid #ddd;">Dr. Sneha Rao</td>
-            </tr>
-            <tr>
-                <td style="padding:12px; border:1px solid #ddd;">Civil Engineering</td>
-                <td style="padding:12px; border:1px solid #ddd;">Mr. V. Prasad</td>
-            </tr>
-        </table>
-    </section>
-
-    <section id="faculty">
-        <h2>👨‍🏫 Faculty Details</h2>
-        <p>Our teachers are experts in their subjects. They are available for student help daily from 9:00 AM to 4:00 PM in the Staff Room.</p>
+        <p>We have <strong>Computer Science</strong>, <strong>Electronics</strong>, and <strong>Civil Engineering</strong>. Each department has the best teachers and labs.</p>
     </section>
 
     <section id="admission">
-        <h2>📝 Online Admission 2026</h2>
-        <p>Want to join BITS Narsampet? Fill in your name and class below to start the application process.</p>
+        <h2>📝 Apply & Talk to Us</h2>
+        <p>If you want to join us or have a question, you can chat with us directly!</p>
+        
         <div class="form-box">
-            <label>Student Name:</label>
-            <input type="text" placeholder="Enter your full name">
+            <h3>How to Apply:</h3>
+            <p>1. Enter your name below.<br>2. Click the Green button to chat with the office.</p>
             
-            <label>Select Your Class:</label>
-            <select>
-                <option>Choose Class</option>
-                <option>10th Standard</option>
-                <option>Intermediate (11th/12th)</option>
-                <option>Engineering (B.Tech)</option>
-            </select>
-            <button class="btn" onclick="showSuccess()">Apply Now</button>
+            <input type="text" id="userName" placeholder="Type your Name here...">
+            
+            <a href="https://wa.me/910000000000?text=Hello! I want to apply to BITS Narsampet." target="_blank" class="whatsapp-btn">
+                💬 Chat on WhatsApp to Apply
+            </a>
         </div>
     </section>
 
     <section id="contact" style="border-bottom: none;">
-        <h2>✉️ Contact Us</h2>
-        <p>Have a question for the principal or office? Send us a quick message!</p>
-        <div class="form-box">
-            <input type="email" placeholder="Your Email Address">
-            <textarea placeholder="Type your question or message here..." style="height: 100px;"></textarea>
-            <button class="btn" style="background: #333;" onclick="showSuccess()">Send Message</button>
-        </div>
+        <h2>✉️ Contact Information</h2>
+        <p><strong>Address:</strong> Narsampet, Warangal, Telangana, India.</p>
+        <p><strong>Email:</strong> bits-narsampet@email.com</p>
+        <p>Click the button below to send a quick email inquiry:</p>
+        <a href="mailto:bits-narsampet@email.com" class="btn">Send an Email</a>
     </section>
 
 </div>
 
 <footer>
-    &copy; 2026 BITS Narsampet Hub | Sydney, Australia | Updated: March 2, 2026
+    &copy; 2026 BITS Narsampet Hub | Narsampet, Telangana, India | Updated: Today
 </footer>
-
-<script>
-    function showSuccess() {
-        alert("Success! Your information has been sent to the College Office. We will contact you soon!");
-    }
-</script>
 
 </body>
 </html>
