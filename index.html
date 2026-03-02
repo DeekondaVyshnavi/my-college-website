@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My College Website</title>
+    <title>My College Information Website</title>
+    <style>
+        /* This makes it look like a real website */
+        body { font-family: sans-serif; text-align: center; background-color: #eef2f3; margin: 0; padding: 0; }
+        header { background-color: #0056b3; color: white; padding: 30px; }
+        nav { background: #333; padding: 10px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .content { background: white; width: 80%; margin: 20px auto; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px grey; }
+        .notice-box { border: 2px dashed red; padding: 10px; background-color: #fff4f4; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Our College</h1>
-    <p>Check here daily for the latest news!</p>
-    
-    <h3>Today's Notice:</h3>
-    <p style="color: red;">* Final Exams start next Monday! *</p>
+
+    <header>
+        <h1>Welcome to Our College Hub</h1>
+        <p>Your Daily Source for Info</p>
+    </header>
 
     <nav>
-        <a href="about.html">About Us</a> | 
-        <a href="faculty.html">Our Teachers</a> | 
-        <a href="Students.html">Open Admissions</a> | 
-        <a href="contact.html">Contact Us</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#admission">Admission</a>
     </nav>
+
+    <div class="content">
+        <div class="notice-box">
+            <h3 style="color: red;">📢 Today's Important Notice:</h3>
+            <p><strong>Final Exams start next Monday! Please collect your hall tickets.</strong></p>
+        </div>
+
+        <section id="about">
+            <h2>🏫 About Our College</h2>
+            <p>Our college is the best place to learn Science, Arts, and Sports!</p>
+        </section>
+
+        <section id="departments">
+            <h2>📚 Departments</h2>
+            <p>Computer Science | Physics | Biology | Commerce</p>
+        </section>
+
+        <section id="faculty">
+            <h2>👨‍🏫 Our Faculty</h2>
+            <p>Meet our expert teachers in the main staff room daily from 9 AM to 4 PM.</p>
+        </section>
+
+        <section id="admission">
+            <h2>📝 Admission</h2>
+            <p>Open Admissions are now live! Click the button below to apply.</p>
+            <button style="padding: 10px 20px; background: green; color: white; border: none; cursor: pointer;">Apply Now</button>
+        </section>
+    </div>
+
+    <footer style="margin-top: 50px; color: grey;">
+        <p>Contact us: college@email.com | Sydney, Australia</p>
+    </footer>
+
 </body>
 </html>
