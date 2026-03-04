@@ -3,36 +3,21 @@
 <head>
     <title>BITS Narsampet - Student Hub</title>
     <style>
-        /* Modern and clean look */
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f7f6; color: #333; }
-        
         header { background: #003366; color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid #e67e22; }
-        
-        /* Moving News Bar */
         .news-ticker { background: #ffcc00; color: #222; padding: 10px; font-weight: bold; }
-        
         nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
         nav a:hover { color: #e67e22; }
-        
         .main-container { max-width: 900px; margin: 20px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        
         .notice-board { background: #fff3cd; border-left: 8px solid #e67e22; padding: 15px; border-radius: 5px; margin-bottom: 25px; }
-        
         section { padding: 25px 0; border-bottom: 1px solid #eee; }
         h2 { color: #003366; }
-        
-        /* Button Styles */
         .btn { background: #e67e22; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; text-decoration: none; display: inline-block; text-align: center; }
-        .btn:hover { background: #d35400; }
-        
-        /* WhatsApp Green Color */
         .whatsapp-btn { background: #25D366; color: white; padding: 12px 20px; border: none; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; width: 100%; cursor: pointer; font-size: 16px; }
         .whatsapp-btn:hover { background: #128C7E; }
-
         .form-box { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; }
         input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 16px; }
-        
         footer { text-align: center; padding: 30px; color: #777; background: #eee; }
         .college-img { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
     </style>
@@ -56,7 +41,6 @@
 </nav>
 
 <div class="main-container">
-
     <div style="text-align: center; margin-bottom: 25px;">
         <img src="https://bitswgl.ac.in/assets/img/about/bits_building.png" alt="BITS Building" class="college-img">
         <p><i>The beautiful BITS Narsampet Campus</i></p>
@@ -79,17 +63,11 @@
 
     <section id="admission">
         <h2>📝 Apply & Talk to Us</h2>
-        <p>If you want to join us or have a question, you can chat with us directly!</p>
-        
         <div class="form-box">
             <h3>How to Apply:</h3>
             <p>1. Enter your name below.<br>2. Click the Green button to chat with the office.</p>
-            
             <input type="text" id="userName" placeholder="Type your Name here...">
-            
-            <button onclick="sendWhatsApp()" class="whatsapp-btn">
-                💬 Chat on WhatsApp to Apply
-            </button>
+            <button onclick="sendWhatsApp()" class="whatsapp-btn">💬 Chat on WhatsApp to Apply</button>
         </div>
     </section>
 
@@ -100,25 +78,22 @@
         <p>Click the button below to send a quick email inquiry:</p>
         <a href="mailto:deekondavyshnavi141@gmail.com" class="btn">Send an Email</a>
     </section>
-
 </div>
 
-<footer>
-    &copy; 2026 BITS Narsampet Hub | Narsampet, Telangana, India | Updated: Today
-</footer>
+<footer>&copy; 2026 BITS Narsampet Hub | Updated: Today</footer>
 
 <script>
     function sendWhatsApp() {
-        // 1. Get the name from the input box
+        // Get the name from the input field
         var name = document.getElementById("userName").value;
         
-        // 2. CHANGE THIS: Put your real 10-digit number after the 91
-        var phoneNumber = "91YOUR_PHONE_NUMBER_HERE"; 
+        // YOUR UPDATED PHONE NUMBER
+        var phoneNumber = "919000120472"; 
         
-        // 3. Create the message
+        // Create the message. If name is empty, it says "a student"
         var message = "Hello! My name is " + (name ? name : "a student") + ". I want to apply to BITS Narsampet.";
         
-        // 4. Open WhatsApp link
+        // Open the WhatsApp URL
         var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
         window.open(url, '_blank');
     }
