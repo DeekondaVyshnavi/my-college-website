@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official information hub for BITS Narsampet students and applicants. News, departments, admissions, contact and more.">
+    <meta name="keywords" content="BITS Narsampet, engineering college, admissions, student hub">
+    <meta name="author" content="BITS Narsampet">
     <title>BITS Narsampet - Student Hub</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f7f6; color: #333; }
-        header { background: #003366; color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid #e67e22; }
-        .news-ticker { background: #ffcc00; color: #222; padding: 10px; font-weight: bold; }
-        nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        nav a:hover { color: #e67e22; }
-        .main-container { max-width: 900px; margin: 20px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .notice-board { background: #fff3cd; border-left: 8px solid #e67e22; padding: 15px; border-radius: 5px; margin-bottom: 25px; }
-        section { padding: 25px 0; border-bottom: 1px solid #eee; }
-        h2 { color: #003366; }
-        .btn { background: #e67e22; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; text-decoration: none; display: inline-block; text-align: center; }
-        .whatsapp-btn { background: #25D366; color: white; padding: 12px 20px; border: none; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; width: 100%; cursor: pointer; font-size: 16px; }
-        .whatsapp-btn:hover { background: #128C7E; }
-        .form-box { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; }
-        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 16px; }
-        footer { text-align: center; padding: 30px; color: #777; background: #eee; }
-        .college-img { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    </style>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -30,12 +18,15 @@
 </header>
 
 <div class="news-ticker">
-    <marquee>📢 Hall Tickets are out! | Sports Day next week! | New Admissions for 2026 started! | Stay safe and keep learning.</marquee>
+    <p>📢 Hall Tickets are out! | Sports Day next week! | New Admissions for 2026 started! | Stay safe and keep learning.</p>
 </div>
 
 <nav>
     <a href="#about">About</a>
+    <a href="#mission">Mission</a>
     <a href="#departments">Departments</a>
+    <a href="#events">Events</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#admission">Admission</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -50,54 +41,79 @@
         <h2>📢 Principal's Message</h2>
         <p><strong>Exams:</strong> Class 10 Board Exam schedules are now available. Visit the office for details.</p>
     </div>
+    <section id="events">
+        <h2>🗓 Upcoming Events & News</h2>
+        <ul>
+            <li>Sports Day – April 15, 2026</li>
+            <li>Guest lecture on AI – March 25, 2026</li>
+            <li>New semester starts July 1, 2026</li>
+        </ul>
+    </section>
 
     <section id="about">
         <h2>🏫 About Us</h2>
         <p>BITS Narsampet is located in Telangana, India. We are a top college for Engineering and Science. Our goal is to make every student a leader.</p>
+    </section>
+    <section id="mission">
+        <h2>🎯 Our Mission & Vision</h2>
+        <p>To empower students with quality technical education, foster innovation, and build leaders who contribute to society and industry.</p>
     </section>
 
     <section id="departments">
         <h2>📚 Departments</h2>
         <p>We have <strong>Computer Science</strong>, <strong>Electronics</strong>, and <strong>Civil Engineering</strong>. Each department has the best teachers and labs.</p>
     </section>
+    <section id="testimonials">
+        <h2>💬 Testimonials</h2>
+        <blockquote>"BITS Narsampet gave me the skills to succeed in the tech world." – A. Kumar, Alumnus 2023</blockquote>
+        <blockquote>"Supportive faculty and excellent labs." – S. Reddy, Current Student</blockquote>
+    </section>
 
     <section id="admission">
         <h2>📝 Apply & Talk to Us</h2>
         <div class="form-box">
-            <h3>How to Apply:</h3>
-            <p>1. Enter your name below.<br>2. Click the Green button to chat with the office.</p>
+            <h3>Request Information</h3>
+            <form id="leadForm" onsubmit="submitLead(event)">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <label for="program">Interested Program</label>
+                <select id="program" name="program">
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                </select>
+                <button type="submit" class="btn">Submit Inquiry</button>
+            </form>
+            <p>or</p>
+            <p>Enter your name to chat directly:</p>
             <input type="text" id="userName" placeholder="Type your Name here...">
             <button onclick="sendWhatsApp()" class="whatsapp-btn">💬 Chat on WhatsApp to Apply</button>
         </div>
     </section>
 
+    <section id="faq">
+        <h2>❓ Frequently Asked Questions</h2>
+        <p><strong>Q:</strong> When does admission open?<br><strong>A:</strong> June each year.</p>
+        <p><strong>Q:</strong> What documents are required?<br><strong>A:</strong> 10th/12th marksheet, ID proof, passport photo.</p>
+    </section>
     <section id="contact" style="border-bottom: none;">
         <h2>✉️ Contact Information</h2>
         <p><strong>Address:</strong> Narsampet, Warangal, Telangana, India.</p>
-        <p><strong>Email:</strong> deekondavyshnavi141@gmail.com</p>
+        <p><strong>Email:</strong> <a href="mailto:deekondavyshnavi141@gmail.com">deekondavyshnavi141@gmail.com</a></p>
         <p>Click the button below to send a quick email inquiry:</p>
         <a href="mailto:deekondavyshnavi141@gmail.com" class="btn">Send an Email</a>
+        <h3>Find us on the map</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.0000000000005!2d78.91500000000001!3d17.783000000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQ2JzMyLjAiTiA3OMKwNTQnMTkuMCJF!5e0!3m2!1sen!2sin!4v1610000000000"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 </div>
 
-<footer>&copy; 2026 BITS Narsampet Hub | Updated: Today</footer>
+<footer>&copy; <span id="currentYear">2026</span> BITS Narsampet Hub | Updated: Today | <a href="privacy.html">Privacy Policy</a></footer>
 
-<script>
-    function sendWhatsApp() {
-        // Get the name from the input field
-        var name = document.getElementById("userName").value;
-        
-        // YOUR UPDATED PHONE NUMBER
-        var phoneNumber = "919000120472"; 
-        
-        // Create the message. If name is empty, it says "a student"
-        var message = "Hello! My name is " + (name ? name : "a student") + ". I want to apply to BITS Narsampet.";
-        
-        // Open the WhatsApp URL
-        var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-        window.open(url, '_blank');
-    }
-</script>
-
+<script src="script.js"></script>
+<!-- Analytics placeholder: insert Google Analytics or similar here -->
 </body>
 </html>
